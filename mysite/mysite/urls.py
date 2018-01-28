@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import include
+from mytruescore.views import dashboard
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', dashboard, name='dashboard'),
     url(r'^account/', include('mytruescore.urls')),
 ]
 
