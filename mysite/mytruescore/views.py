@@ -1,11 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
 # Create your views here.
 from .scraper import *
 
 def dashboard(request):
 
-    # test = leetcode('dt9').solvedQuestions()
-    # test = firecode('12834').solvedQuestions()
-    # return HttpResponse(test)
-    return render(request, 'dashboard.html')
+    uvaScore = uva("tianzhi")
+    # leetCodeScore = leetcode('dt9').solvedQuestions()
+    # firecodeScore = firecode('12834').solvedQuestions()
+    leetcodeScore = leetcode("tianzhi").solvedQuestions()
+    firecodeScore = firecode("12824")
+    totalProblemsSolved  = uvaScore + firecodeScore
+    return render(request, 'dashboard.html',{'problemsSolved': totalProblemsSolved})
+    
+    
