@@ -4,6 +4,5 @@ from django.http import HttpResponse
 from .leetcode import leetcode
 
 def dashboard(request):
-    test = leetcode('dt9')
-    temp = test.finishedContests()
+    test = leetcode('dt9').solvedQuestions()
     return render(request, 'dashboard.html')
