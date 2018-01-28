@@ -9,9 +9,9 @@ def dashboard(request):
     uvaScore = uva("tianzhi")
     # leetCodeScore = leetcode('dt9').solvedQuestions()
     # firecodeScore = firecode('12834').solvedQuestions()
-    leetcodeScore = leetcode("tianzhi").solvedQuestions()
+    leetcodeScore = leetcode("tianzhi")
     firecodeScore = firecode("12824")
-    totalProblemsSolved  = uvaScore + firecodeScore
+    totalProblemsSolved  = uvaScore + firecodeScore + leetcodeScore
     return render(request, 'dashboard.html',{'problemsSolved': totalProblemsSolved})
     
     
