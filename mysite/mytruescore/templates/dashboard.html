@@ -27,8 +27,7 @@
   <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
-  <script src="vendor/chart.js/Chart.min.js"></script>
-  <script src="js/sb-admin-charts.min.js"></script>
+
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">{% load staticfiles %}
@@ -103,7 +102,7 @@
       </ol>
       <!-- Icon Cards-->
       <div class="row">
-        <div class="col-xl-3 col-sm-6 mb-3">
+        <div class="col-xl-4 col-sm-6 mb-3">
           <div class="card text-white bg-primary o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
@@ -119,8 +118,8 @@
             </a>
           </div>
         </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-warning o-hidden h-100">
+        <div class="col-xl-4 col-sm-6 mb-3">
+          <div class="card text-white bg-success o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-list"></i>
@@ -128,30 +127,14 @@
               <div class="mr-5">Problems Solved</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
+              <span class="float-left">{{ problemsSolved }}</span>
               <span class="float-right">
                 <i class="fa fa-angle-right"></i>
               </span>
             </a>
           </div>
         </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-success o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-shopping-cart"></i>
-              </div>
-              <div class="mr-5">Percentage Solved</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
+        <div class="col-xl-4 col-sm-6 mb-3">
           <div class="card text-white bg-danger o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
@@ -185,18 +168,41 @@
               <i class="fa fa-bar-chart"></i>Most recently solved</div>
             <div class="card-body">
               <div class="row">
-                <div class="col-sm-8 my-auto"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-                  <canvas id="myBarChart" width="972" height="486" class="chartjs-render-monitor" style="display: block; height: 243px; width: 486px;"></canvas>
-                </div>
+                <!-- <div class="col-sm-8 my-auto"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div> -->
+                  <!-- <canvas id="myBarChart" width="972" height="486" class="chartjs-render-monitor" style="display: block; height: 243px; width: 486px;"></canvas> -->
+                <!-- </div> -->
+                <ul class="list-group">
+                  <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3051" target="_blank">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    11900 - Boiled Eggs
+                    <span class="badge badge-primary badge-pill">C++</span>
+                  </li></a>
+                  <a href="https://www.hackerrank.com/challenges/game-of-stones-1/problem" target="_blank">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Game of Stones
+                    <span class="badge badge-primary badge-pill">python</span>
+                  </li></a>
+                  <a href="https://www.hackerrank.com/challenges/a-chessboard-game-1/problem" target="_blank">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    A Chessboard Game
+                    <span class="badge badge-primary badge-pill">python</span>
+                  </li></a>
+                  <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3747" target="_blank">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    12325 - Zombie's Treasure Chest
+                    <span class="badge badge-primary badge-pill">C</span>
+                  </li></a>
+                  <a href="https://open.kattis.com/problems/hello" target="_blank">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Hello World!
+                    <span class="badge badge-primary badge-pill">Java</span>
+                  </li></a>
+                </ul>
                 
               </div>
             </div>
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
           </div>
-          <!-- Card Columns Example Social Feed-->
-          <div class="mb-0 mt-4">
-            <i class="fa fa-newspaper-o"></i> News Feed</div>
-          <hr class="mt-2">
           
           <!-- /Card Columns-->
         </div>
@@ -283,19 +289,19 @@
       </div>
     </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> -->
     <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- <script src="vendor/chart.js/Chart.min.js"></script>
     <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.js"></script> -->
     <!-- Custom scripts for all pages-->
-    <script src="js_1/sb-admin.min.js"></script>
+    <!-- <script src="js_1/sb-admin.min.js"></script> -->
     <!-- Custom scripts for this page-->
-    <script src="js_1/sb-admin-datatables.min.js"></script>
-    <script src="js_1/sb-admin-charts.min.js"></script>
+    <!-- <script src="js_1/sb-admin-datatables.min.js"></script>
+    <script src="js_1/sb-admin-charts.min.js"></script> -->
   </div>
 
 
