@@ -6,4 +6,4 @@ from .leetcode import leetcode
 def dashboard(request):
     test = leetcode('dt9')
     temp = test.finishedContests()
-    return render(request, 'mytruescore/dashboard.html')
+    return render(request, 'dashboard.html')
