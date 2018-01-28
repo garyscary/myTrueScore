@@ -35,25 +35,13 @@ def firecode(userid):
         if solved:
             solvedSet.add(problem) 
     return len(solvedSet)
-    
-class leetcode:
-    def __init__(self,username):
-        self.username = username
-        self.url = "https://leetcode.com/"+username+'/'
-        r = requests.get(self.url).content
-        self.soup = BeautifulSoup(r)
 
-    # returns string eg. "10 / 750"
-    def solvedQuestions(self):
-        return self.soup.select('#base_content > div > div > div.col-sm-5.col-md-4 > div:nth-of-type(3) > ul > li:nth-of-type(1) > span')[0]
-
-class firecode:
-    def __init__(self,id):
-        self.id = id
-        self.url = "https://www.firecode.io/pages/profile/"+id
-        r = requests.get(self.url).content
-        self.soup = BeautifulSoup(r)
-
-    # returns string eg. "10 / 750"
-    def solvedQuestions(self):
-        return len(self.soup.select('#problem-history > tbody > tr'))
+def leetcode(username):
+    url = "https://leetcode.com/"
+    content = requests.get(url+username).content
+    soup = BeautifulSoup(content, "lxml")
+    i = soup.find("i",{"class":"fa fa-question fa-lg fa-fw"}).parent.find_all("span")
+    count = []
+    for e in i:
+        count = e.text.strip().split(" / ")
+    return int(count[0])
