@@ -4,7 +4,8 @@ from django.http import HttpResponse
 from .scraper import *
 
 def dashboard(request):
-    test = leetcode('dt9').solvedQuestions()
-    test = firecode('12834').solvedQuestions()
+
+    # test = leetcode('dt9').solvedQuestions()
+    # test = firecode('12834').solvedQuestions()
     # return HttpResponse(test)
     return render(request, 'dashboard.html')
