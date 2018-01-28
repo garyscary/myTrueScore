@@ -9,15 +9,8 @@ class leetcode:
     def finishedContests(self):
         return self.tree.xpath('//*[@id="base_content"]/div/div/div[1]/div[2]/ul/li/span/text()')
     def solvedQuestions(self):
-        return 
+        return self.tree.xpath('//*[@id="base_content"]/div/div/div[1]/div[3]/ul/li[1]/span/text()')
     def acceptedSubmissions(self):
-        return
+        return self.tree.xpath('//*[@id="base_content"]/div/div/div[1]/div[3]/ul/li[2]/span/text()')
     def acceptanceRate(self):
-        return
-    def submissionsLastYear(self):
-        return
-    def recentSubmissions(self):
-        # array of problems
-        return
-    def languages(self):
-        return
+        return self.tree.xpath('//*[@id="base_content"]/div/div/div[1]/div[3]/ul/li[3]/span/text()')
