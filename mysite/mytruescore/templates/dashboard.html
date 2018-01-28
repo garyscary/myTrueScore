@@ -30,8 +30,33 @@
   <link href="css/sb-admin.css" rel="stylesheet">
 </head>
 
-<body>
-  <body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">{% load staticfiles %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href=" {% static 'css/main.css' %}">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="{% static 'js/base.js' %}"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>SB Admin - Start Bootstrap Template</title>
+  <!-- Bootstrap core CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+
+
+
+  
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="index.html">MyTrueScore</a>
@@ -111,7 +136,7 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-comments"></i>
               </div>
-              <div class="mr-5">26 New Messages!</div>
+              <div class="mr-5">Tianzhi (@tianzhi) </div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
               <span class="float-left">View Details</span>
@@ -127,7 +152,7 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-list"></i>
               </div>
-              <div class="mr-5">11 New Tasks!</div>
+              <div class="mr-5">Problems Solved</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
               <span class="float-left">View Details</span>
@@ -143,7 +168,7 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-shopping-cart"></i>
               </div>
-              <div class="mr-5">123 New Orders!</div>
+              <div class="mr-5">Percentage Solved</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
               <span class="float-left">View Details</span>
@@ -159,10 +184,10 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-support"></i>
               </div>
-              <div class="mr-5">13 New Tickets!</div>
+              <div class="mr-5">Languages Used</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
+              <span class="float-left">C++, Java</span>
               <span class="float-right">
                 <i class="fa fa-angle-right"></i>
               </span>
@@ -173,7 +198,7 @@
       <!-- Area Chart Example-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-area-chart"></i> Area Chart Example</div>
+          <i class="fa fa-area-chart"></i>Problems Solved by Category</div>
         <div class="card-body"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
           <canvas id="myAreaChart" width="2306" height="690" class="chartjs-render-monitor" style="display: block; height: 345px; width: 1153px;"></canvas>
         </div>
@@ -184,7 +209,7 @@
           <!-- Example Bar Chart Card-->
           <div class="card mb-3">
             <div class="card-header">
-              <i class="fa fa-bar-chart"></i> Bar Chart Example</div>
+              <i class="fa fa-bar-chart"></i>Most recently solved</div>
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-8 my-auto"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
@@ -323,5 +348,7 @@
     <script src="js/sb-admin-charts.min.js"></script>
   </div>
 
+
 </body>
+
 </html>
