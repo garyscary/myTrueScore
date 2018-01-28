@@ -14,3 +14,4 @@ class leetcode:
         return self.tree.xpath('//*[@id="base_content"]/div/div/div[1]/div[3]/ul/li[2]/span/text()')
     def acceptanceRate(self):
         return self.tree.xpath('//*[@id="base_content"]/div/div/div[1]/div[3]/ul/li[3]/span/text()')
+    
