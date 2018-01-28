@@ -16,6 +16,25 @@ def uva(username):
         if i[2] == 90 and i[0] not in solvedSet:
             solvedSet.add(i[0])
     return len(solvedSet)
+
+def firecode(userid):
+    url = "https://www.firecode.io/pages/profile/"
+    content = requests.get(url+userid).content
+    soup = BeautifulSoup(content, "lxml")
+    table = soup.find("table", {"id": "problem-history"}).tbody
+    solvedSet = set()
+    for tr in table.find_all("tr"):
+        problem = ""
+        solved = False
+        a = tr.find_all('td')[1].find_all('a')
+        for i in a:
+            problem = i.text.strip()
+        b = tr.find_all('td')[2].find_all("img")
+        if not b:
+            solved = True
+        if solved:
+            solvedSet.add(problem) 
+    return len(solvedSet)
     
 class leetcode:
     def __init__(self,username):
