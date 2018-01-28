@@ -7,5 +7,5 @@ def dashboard(request):
     test = leetcode('dt9')
     # temp = "Hello, world. You're at the polls index."
     temp = test.finishedContests()
-    return HttpResponse(temp)
-    
+
+    return render(request, 'mytruescore/dashboard.html')
